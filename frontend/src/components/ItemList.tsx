@@ -1,9 +1,10 @@
+// backend: itemList.tsx
 import React, { useEffect, useState } from 'react';
-import { getItems, createItem } from '../services/api'; // Pastikan path import benar
+import { getItems, createItem, Item } from '../services/api'; // Impor tipe Item
 
 const ItemList: React.FC = () => {
-  const [items, setItems] = useState<any[]>([]);
-  const [newItem, setNewItem] = useState({
+  const [items, setItems] = useState<Item[]>([]);
+  const [newItem, setNewItem] = useState<Item>({
     category: '',
     stack: '',
     in: '',
